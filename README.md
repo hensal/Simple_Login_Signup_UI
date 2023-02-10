@@ -1,4 +1,4 @@
-# example_practise_app
+# Simple_Login_SignUp_UI
 
 A new Flutter project.
 

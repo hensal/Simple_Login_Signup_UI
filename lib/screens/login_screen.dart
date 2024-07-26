@@ -1,8 +1,9 @@
 import 'package:example_practise_app/router.dart';
 import 'package:flutter/material.dart';
 
+
 class LoginScreen extends StatefulWidget {
-  const LoginScreen({Key? key}) : super(key: key);
+  const LoginScreen({super.key});
 
   @override
   State<LoginScreen> createState() => _LoginScreenState();
@@ -17,16 +18,17 @@ class _LoginScreenState extends State<LoginScreen> {
         child: SingleChildScrollView(
           child: Column(
             children: [
-             //image assets        
-               const Text('Welcome!',
-                      style: TextStyle(
-                        color: Colors.red,
-                        fontSize: 30,
-                        fontStyle: FontStyle.italic,
-                        fontFamily: 'Times New Roman',
-                        fontWeight: FontWeight.w500,
-                        ),  
-                      ),                               
+              // Image assets (if any)
+              const Text(
+                'Welcome!',
+                style: TextStyle(
+                  color: Colors.red,
+                  fontSize: 30,
+                  fontStyle: FontStyle.italic,
+                  fontFamily: 'Times New Roman',
+                  fontWeight: FontWeight.w500,
+                ),
+              ),
               Padding(
                 padding: const EdgeInsets.symmetric(
                   vertical: 16,
@@ -105,6 +107,45 @@ class _LoginScreenState extends State<LoginScreen> {
                               fontWeight: FontWeight.bold,
                             ),
                           ),
+                        ),
+                      ],
+                    ),
+                    const SizedBox(height: 20),
+                    // Divider with text and social media icons
+                    const Row(
+                      children: [
+                        Expanded(child: Divider(thickness: 1)),
+                        Padding(
+                          padding: EdgeInsets.symmetric(horizontal: 8.0),
+                          child: Text('or'),
+                        ),
+                        Expanded(child: Divider(thickness: 1)),
+                      ],
+                    ),
+                    const SizedBox(height: 20),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        IconButton(
+                          icon: const Icon(Icons.facebook),
+                          color: Colors.blue,
+                          onPressed: () {
+                            // Add Facebook login functionality here
+                          },
+                        ),
+                        IconButton(
+                          icon: const Icon(Icons.mail),
+                          color: Colors.red,
+                          onPressed: () {
+                            // Add Gmail login functionality here
+                          },
+                        ),
+                        IconButton(
+                          icon: const Icon(Icons.alternate_email),
+                          color: Colors.blueGrey,
+                          onPressed: () {
+                            // Add Twitter login functionality here
+                          },
                         ),
                       ],
                     ),

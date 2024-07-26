@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatefulWidget {
-  const HomeScreen({Key? key}) : super(key: key);
+  const HomeScreen({super.key});
 
   @override
   State<HomeScreen> createState() => _HomeScreenState();
@@ -25,31 +25,40 @@ class _HomeScreenState extends State<HomeScreen> {
                 fontFamily: 'Times',
               ),
             ),
+            actions: [
+              IconButton(
+                icon: const Icon(Icons.logout),
+                onPressed: () {
+                  // Navigate to login screen
+                  Navigator.pushReplacementNamed(context, '/');
+                },
+              ),
+            ],
           ),
-          body: SingleChildScrollView(
+          body: const SingleChildScrollView(
             child: Center(
               child: Column(
-                children: const [
-                  //images aassets
+                children: [
+                  // images assets
                   SizedBox(
                     height: 10,
                     width: 10,
-                  ),                            
-                      Text(
-                        'Welcome to my app ❤️',
-                         style: TextStyle(
-                          fontSize: 18,
-                          color: Colors.red,
-                          fontFamily: 'Times New Roman',
-                        ),
-                      ),
-                    Text(
-                        'Follow me at GitHub @josephyaduvanshi .',
-                        style: TextStyle(
-                          fontSize: 18,
-                          color: Colors.red,
-                          fontFamily: 'Times New Roman',
-                        ),                    
+                  ),
+                  Text(
+                    'Welcome to my app ❤️',
+                    style: TextStyle(
+                      fontSize: 18,
+                      color: Colors.red,
+                      fontFamily: 'Times New Roman',
+                    ),
+                  ),
+                  Text(
+                    'https://github.com/hensal',
+                    style: TextStyle(
+                      fontSize: 18,
+                      color: Colors.red,
+                      fontFamily: 'Times New Roman',
+                    ),
                   ),
                 ],
               ),
